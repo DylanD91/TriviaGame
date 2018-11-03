@@ -6,7 +6,7 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 
-// Questions array
+// This is where my questions are
 var questions = [{
     question: "Although the citys tallest building has been renamed, TRUE Chicagoans still call it:",
     answerList: ["The Sears Tower", "Willis Tower", "The Eifle Tower", "The Leaning Tower of Piza"],
@@ -42,13 +42,13 @@ $("#start").on("click", function() {
     // Hide Start button
     $(this).hide();
 
-    // Display initial time countdown
+    // This is where we display the countdown
     $("#time").html("<h2>Time Remaining: 30 Seconds</h2>" + "<br>");
 
-    // Start timer countdown
+    // This is where we start the timer
     run();
    
-    // Display questions --- I still want to turn this into a reusable piece so that i don't have to repeat this section for each question
+    // This is where I display my questions. I had a hard time figuring out how to maybe consolidate this section, rather then repeat it.
     // Question 1
     $("#question1").html("<h3>" + questions[0].question + "</h3>");
     $("#answer1").html("<input type='radio' name='answer1' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
