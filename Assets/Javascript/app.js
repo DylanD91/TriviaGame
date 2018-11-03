@@ -48,7 +48,10 @@ $("#start").on("click", function() {
     // This is where we start the timer
     run();
    
-    // This is where I display my questions. I had a hard time figuring out how to maybe consolidate this section, rather then repeat it.
+    // This is where I display my questions. I had a hard time figuring out how to maybe consolidate this section, rather then repeat it, but a classmate showed me
+    // how he consolidated his work to make it visually more appealing to look at. I will work on that next. Being repetitive with my code
+    // has been helping me understand more what each, function, operator, and codes do. 
+    // I added radio buttons, because each question has 4 answers to choose from, that are all related to the same question
     // Question 1
     $("#question1").html("<h3>" + questions[0].question + "</h3>");
     $("#answer1").html("<input type='radio' name='answer1' value='0'>" + "<label>" + questions[0].answerList[0] + "</label>"
@@ -151,7 +154,8 @@ function stop() {
     clearInterval(intervalId);
 }
 
-// Function used for displaying results in terms of correct, incorrect, and unanswered --- I want to put all of these tags inside a div so that i can just hide the parent div
+// This function is where the results are displayed, based off of incorrect, correct, and unanswered. A classnate showed me a way
+// to consolidate all of this, so i don't have to be repetitive. I will work on making simpilar code with JS
 function displayResults() {
 
     $("#time").hide();
@@ -177,8 +181,7 @@ function displayResults() {
     $("#unanswered").html("Unanswered: " + unanswered);
 }
 
-// Function keeps score in terms of correct, incorrect, and unanswered --- I still want to make this a reusable piece so that I don't have to repeat it for each question
-function keepingScore() {
+// Function keeps track of the users answers and results, unanswered, correct, and incorrect
 
     var userAnswer1 = $("input[name='answer1']:checked").val();
     var userAnswer2 = $("input[name='answer2']:checked").val();
@@ -187,7 +190,8 @@ function keepingScore() {
     var userAnswer5 = $("input[name='answer5']:checked").val();
     var userAnswer6 = $("input[name='answer6']:checked").val();
     var userAnswer7 = $("input[name='answer7']:checked").val();
-
+// This is where I put all of my if and else statements, that tell the computer what to do when the user does not answer the question
+// answers correctly, or answers incorrectly. The ++ after unanswered, correct, incorrect, returns a value before increasing
     // Question 1
     if (userAnswer1 === undefined) {
 
