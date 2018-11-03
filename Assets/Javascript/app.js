@@ -182,7 +182,7 @@ function displayResults() {
 }
 
 // Function keeps track of the users answers and results, unanswered, correct, and incorrect
-{
+function keepingScore(){
 
     var userAnswer1 = $("input[name='answer1']:checked").val();
     var userAnswer2 = $("input[name='answer2']:checked").val();
@@ -191,8 +191,8 @@ function displayResults() {
     var userAnswer5 = $("input[name='answer5']:checked").val();
     var userAnswer6 = $("input[name='answer6']:checked").val();
     var userAnswer7 = $("input[name='answer7']:checked").val();
-// This is where I put all of my if and else statements, that tell the computer what to do when the user does not answer the question
-// answers correctly, or answers incorrectly. The ++ after unanswered, correct, incorrect, returns a value before increasing
+ // This is where I put all of my if and else statements, that tell the computer what to do when the user does not answer the question
+ // answers correctly, or answers incorrectly. The ++ after unanswered, correct, incorrect, returns a value before increasing
     // Question 1
     if (userAnswer1 === undefined) {
 
