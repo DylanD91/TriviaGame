@@ -6,7 +6,7 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 var unanswered = 0;
 
-// This is where my questions are
+// This is where my questions are. I created an array in the answerList, and then defined what the answer was
 var questions = [{
     question: "Although the citys tallest building has been renamed, TRUE Chicagoans still call it:",
     answerList: ["The Sears Tower", "Willis Tower", "The Eifle Tower", "The Leaning Tower of Piza"],
