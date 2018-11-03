@@ -107,7 +107,7 @@ $("#start").on("click", function() {
     );
 
     // Submit button
-    $("#submit").html("<button id='done' class='btn'>Done</button>");
+    $("#submit").html("<button id='done' class='btn'>Done</button>"); 
 
     // Click event runs keepingScore() and displayResults() when user clicks Done button
     $("#done").on("click", function() {
@@ -182,6 +182,7 @@ function displayResults() {
 }
 
 // Function keeps track of the users answers and results, unanswered, correct, and incorrect
+{
 
     var userAnswer1 = $("input[name='answer1']:checked").val();
     var userAnswer2 = $("input[name='answer2']:checked").val();
@@ -289,5 +290,5 @@ function displayResults() {
 
         incorrectAnswers++;
     }  
-
+}  
 
